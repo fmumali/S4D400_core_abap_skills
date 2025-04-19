@@ -1,4 +1,4 @@
-CLASS zcl_fm82_method_exception DEFINITION
+CLASS zcl_001_method_exception DEFINITION
   PUBLIC
   FINAL
   CREATE PUBLIC .
@@ -12,7 +12,7 @@ ENDCLASS.
 
 
 
-CLASS zcl_fm82_method_exception IMPLEMENTATION.
+CLASS zcl_001_method_exception IMPLEMENTATION.
 
 
   METHOD if_oo_adt_classrun~main.

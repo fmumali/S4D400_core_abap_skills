@@ -1,4 +1,4 @@
-CLASS zcl_fm82_simple_itabs DEFINITION
+CLASS zcl_001_simple_itabs DEFINITION
   PUBLIC
   FINAL
   CREATE PUBLIC .
@@ -12,7 +12,7 @@ ENDCLASS.
 
 
 
-CLASS zcl_fm82_simple_itabs IMPLEMENTATION.
+CLASS zcl_001_simple_itabs IMPLEMENTATION.
 
 
   METHOD if_oo_adt_classrun~main.

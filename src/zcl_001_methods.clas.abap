@@ -1,4 +1,4 @@
-CLASS zcl_fm82_constructor DEFINITION
+CLASS zcl_001_methods DEFINITION
   PUBLIC
   FINAL
   CREATE PUBLIC .
@@ -12,22 +12,27 @@ ENDCLASS.
 
 
 
-CLASS ZCL_FM82_CONSTRUCTOR IMPLEMENTATION.
+CLASS ZCL_001_METHODS IMPLEMENTATION.
 
 
-  METHOD if_oo_adt_classrun~main.
+METHOD if_oo_adt_classrun~main.
 
     DATA connection TYPE REF TO lcl_connection.
     DATA connections TYPE TABLE OF REF TO lcl_connection.
 
 * First Instance
 **********************************************************************
-    TRY.
+    connection = NEW #(  ).
 
-        connection = NEW #(
-                            i_carrier_id    = 'LH'
-                            i_connection_id = '0400'
-                          ).
+    TRY.
+        connection->set_attributes(
+          EXPORTING
+            i_carrier_id    = 'LH'
+            i_connection_id = '0400'
+        ).
+
+*        connection->carrier_id    = 'LH'.
+*        connection->connection_id = '0400'.
 
         APPEND connection TO connections.
 
@@ -38,12 +43,17 @@ CLASS ZCL_FM82_CONSTRUCTOR IMPLEMENTATION.
 * Second instance
 **********************************************************************
 
-    TRY.
+    connection = NEW #(  ).
 
-        connection = NEW #(
+    TRY.
+        connection->set_attributes(
+          EXPORTING
             i_carrier_id    = 'AA'
             i_connection_id = '0017'
         ).
+
+*        connection->carrier_id    = 'AA'.
+*        connection->connection_id = '0017'.
 
         APPEND connection TO connections.
 
@@ -53,13 +63,17 @@ CLASS ZCL_FM82_CONSTRUCTOR IMPLEMENTATION.
 
 * Third instance
 **********************************************************************
-    TRY.
+    connection = NEW #(  ).
 
-        connection = NEW #(
+    TRY.
+        connection->set_attributes(
+          EXPORTING
             i_carrier_id    = 'SQ'
             i_connection_id = '0001'
         ).
 
+*        connection->carrier_id    = 'SQ'.
+*        connection->connection_id = '0001'.
 
         APPEND connection TO connections.
 
@@ -78,4 +92,6 @@ CLASS ZCL_FM82_CONSTRUCTOR IMPLEMENTATION.
     ENDLOOP.
 
   ENDMETHOD.
+
+
 ENDCLASS.

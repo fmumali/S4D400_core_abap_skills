@@ -1,4 +1,4 @@
-CLASS zcl_fm82_func_methods DEFINITION
+CLASS zcl_001_func_methods DEFINITION
   PUBLIC
   FINAL
   CREATE PUBLIC .
@@ -12,7 +12,7 @@ ENDCLASS.
 
 
 
-CLASS zcl_fm82_func_methods IMPLEMENTATION.
+CLASS zcl_001_func_methods IMPLEMENTATION.
 
 
   METHOD if_oo_adt_classrun~main.

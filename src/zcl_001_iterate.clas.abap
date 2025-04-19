@@ -1,4 +1,4 @@
-CLASS zcl_fm82_iterate DEFINITION
+CLASS zcl_001_iterate DEFINITION
   PUBLIC
   FINAL
   CREATE PUBLIC .
@@ -12,7 +12,7 @@ ENDCLASS.
 
 
 
-CLASS zcl_fm82_iterate IMPLEMENTATION.
+CLASS zcl_001_iterate IMPLEMENTATION.
 
 
   METHOD if_oo_adt_classrun~main.

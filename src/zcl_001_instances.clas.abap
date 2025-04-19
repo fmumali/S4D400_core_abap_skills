@@ -1,4 +1,4 @@
-CLASS zcl_fm82_instances DEFINITION
+CLASS zcl_001_instances DEFINITION
   PUBLIC
   FINAL
   CREATE PUBLIC .
@@ -12,7 +12,7 @@ ENDCLASS.
 
 
 
-CLASS zcl_fm82_instances IMPLEMENTATION.
+CLASS zcl_001_instances IMPLEMENTATION.
 
 
   METHOD if_oo_adt_classrun~main.
