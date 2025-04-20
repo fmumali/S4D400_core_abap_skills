@@ -31,6 +31,9 @@ authorization master( global )
   update;
   delete;
 
+  validation validatePrice on save { create; field Price; }
+  validation validateCurrencyCode on save { create; field CurrencyCode; }
+
   draft action Activate optimized;
   draft action Discard;
   draft action Edit;
