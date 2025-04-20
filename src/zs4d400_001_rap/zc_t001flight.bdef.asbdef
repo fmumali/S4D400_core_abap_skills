@@ -1,0 +1,17 @@
+projection implementation in class ZBP_C_T001FLIGHT unique;
+strict ( 2 );
+use draft;
+define behavior for ZC_T001FLIGHT alias Flight
+use etag
+
+{
+  use create;
+  use update;
+  use delete;
+
+  use action Edit;
+  use action Activate;
+  use action Discard;
+  use action Resume;
+  use action Prepare;
+}
