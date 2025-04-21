@@ -5,9 +5,11 @@ define behavior for ZC_T001FLIGHT alias Flight
 use etag
 
 {
-  use create;
+//  use create;
   use update;
-  use delete;
+//  use delete;
+
+  field (readonly)   PlaneTypeID;
 
   use action Edit;
   use action Activate;
